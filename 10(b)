@@ -1,0 +1,17 @@
+*/Program 2:
+Read any of the C files from your previous exercises and print the same on the
+console.
+Code:*/
+#include<stdio.h>
+void main()
+{
+        char ch[50]="Welcome to INT Dept";
+        FILE *fp,*fp1;
+        fp=fopen("sample.c","w");
+        fputs(ch,fp);
+        fclose(fp);
+        fp1=fopen("sample.c","r");
+        fgets(ch,50,fp1);
+        puts(ch);
+        fclose(fp1);
+}
